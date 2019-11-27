@@ -180,7 +180,7 @@ if(isCommand('Ticket' + ' New', message)){
 			return
 		}
 	}
-	if (message.channel.id === "608988874772840468") {
+	if (message.channel.id === "647128852451295242") {
 	let Text = args.slice(2).join(" ")
 	let TUser = message.author
 	if (message.guild.channels.exists("name", "ticket-" + message.author.id)) return message.reply(`You already have a ticket open!`);
@@ -206,7 +206,7 @@ if(isCommand('Ticket' + ' New', message)){
 					return;
 				}).catch(console.error); // Send errors to console
 			} else {
-				message.reply("Hey, you can only make a ticket in the ticket channel.\n> <#608988874772840468>")
+				message.reply("Hey, you can only make a ticket in the ticket channel.\n> <#647128852451295242>")
 			}
 			}
 
