@@ -13,7 +13,7 @@ var prefix = ';';
 
 client.on('message', async message => {
 	
-	if (message.author.bot) return; // Dont answer yourself.
+	if (message.author.bot) return;
 		var args = message.content.split(/[ ]+/)
     function isCommand(command, message){
         var command = command.toLowerCase();
@@ -72,14 +72,12 @@ let sender = message.member
 if (sender.roles.some(Role1 => Role1.name === "SDA Manager")) {
 } else {
 	let msg = message.content.toUpperCase();
-		if (msg.includes('HELL')) {
-			if (msg.includes('HELLO')) {
-				return
-			} else {
-				message.delete();
-				message.reply("Oh no, you can't say that!")
-				return
-			}
+	let args = message.content.split(/[ ]+/)
+	let BadWords = args.toUpperCase();
+		if (BadWords.includes('HELL')) {
+			message.delete();
+			message.reply("Oh no, you can't say that!")
+			return
 		}
 		if (msg.includes('CUNT')) {
 			message.delete();
