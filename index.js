@@ -73,9 +73,13 @@ if (sender.roles.some(Role1 => Role1.name === "SDA Manager")) {
 } else {
 	let msg = message.content.toUpperCase();
 		if (msg.includes('HELL')) {
-			message.delete();
-			message.reply("Oh no, you can't say that!")
-			return
+			if (msg.includes('HELLO')) {
+				return
+			} else {
+				message.delete();
+				message.reply("Oh no, you can't say that!")
+				return
+			}
 		}
 		if (msg.includes('CUNT')) {
 			message.delete();
