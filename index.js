@@ -7,7 +7,7 @@ client.login(BOT_TOKEN)
 var prefix = ';';
 
 ///\\\///\\\
-
+// NjM2NTg4OTM1NzgyMzM0NDc1.XeF2BA.m0seuVGWB8wDFiXPdw3u7ozHvl0
 
 
 
@@ -72,13 +72,6 @@ let sender = message.member
 if (sender.roles.some(Role1 => Role1.name === "SDA Manager")) {
 } else {
 	let msg = message.content.toUpperCase();
-	let args = message.content.split(/[ ]+/)
-	let BadWords = args.toUpperCase();
-		if (BadWords.includes('HELL')) {
-			message.delete();
-			message.reply("Oh no, you can't say that!")
-			return
-		}
 		if (msg.includes('CUNT')) {
 			message.delete();
 			message.reply("Oh no, you can't say that!")
@@ -221,7 +214,7 @@ if(isCommand('SupportRole', message)){
 		}
 	}
 	if(!message.member.roles.some(AuthorizedRole=>[process.env.AUTHORIZED_ROLE, process.env.SDA_AUTHORIZEDROLE].includes(AuthorizedRole.name)) ) return message.reply(process.env.UNAUTH_MESSAGE)
-	user = message.author
+	let user = message.author
 	let Role = message.guild.roles.find(role => role.name === "Support Team");
 	if (User.roles.some(AuthorizedRole=>[process.env.AUTHORIZED_ROLE, process.env.SDA_AUTHORIZEDROLE].includes(AuthorizedRole.name)) ) {
 		message.reply("You no longer have the Support role!")
